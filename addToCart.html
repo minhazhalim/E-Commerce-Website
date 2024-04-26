@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>E-Commerce Website</title>
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css' integrity='sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==' crossorigin='anonymous' />
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' integrity='sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==' crossorigin='anonymous' />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <header class="section-navbar">
+          <section class="top_text">
+               <div class="head container">
+                    <div class="head_text"><p>free shipping, 30-day or refund guarantee</p></div>
+                    <div class="sign_in_up">
+                         <a href="#">sign in</a>
+                         <a href="#">sign up</a>
+                    </div>
+               </div>
+          </section>
+          <div class="container">
+               <div class="navbar-brand">
+                    <a href="index.html"><img src="./images/logo.jpg" alt="ECommerce Logo" class="logo" width="80%" height="auto"></a>
+               </div>
+               <nav class="navbar">
+                    <ul>
+                         <li class="nav-item"><a href="/" class="nav-link">home</a></li>
+                         <li class="nav-item"><a href="about.html" class="nav-link">about</a></li>
+                         <li class="nav-item"><a href="products.html" class="nav-link">products</a></li>
+                         <li class="nav-item"><a href="contact.html" class="nav-link">contact</a></li>
+                         <li class="nav-item">
+                              <a href="addToCart.html" class="nav-link add-to-cart-button" id="cartValue"><i class="fa-solid fa-cart-shopping"></i>0</a>
+                         </li>
+                    </ul>
+               </nav>
+          </div>
+     </header>
+     <section class="addToCartElement">
+          <div class="container">
+               <section><div id="productCartContainer"></div></section>
+               <section class="productCartTotalElem">
+                    <div class="productCartTotalElement">
+                         <p>selected offer summary</p>
+                         <div class="productOrderTotal">
+                              <div>
+                                   <p>sub total:</p>
+                                   <p class="productSubTotal">0</p>
+                              </div>
+                              <div>
+                                   <p>tax:</p>
+                                   <p class="productTax">50</p>
+                              </div>
+                              <hr>
+                              <div>
+                                   <p>final total:</p>
+                                   <p class="productFinalTotal">0</p>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+          </div>
+     </section>
+     <template id="productCartTemplate">
+          <div class="cards" id="cardValue">
+               <article class="information [ card ]">
+                    <div><span class="category"></span></div>
+                    <div class="imageContainer"><img src="" alt="" class="productImage"></div>
+                    <h2 class="productName"></h2>
+                    <p class="productPrice"></p>
+                    <div class="stockElement">
+                         <button class="cartIncrement">+</button>
+                         <p class="productQuantity" data-quantity="1">1</p>
+                         <button class="cartDecrement">-</button>
+                    </div>
+                    <button class="add-to-cart-button remove-to-cart-button">remove</button>
+               </article>
+          </div>
+     </template>
+     <footer class="section-footer">
+          <div class="footer-container container">
+               <div class="content_1">
+                    <img src="./images/log.png" alt="Logo">
+                    <p>welcome to minhaz ecomstore, your ultimate destination for cutting-edge gadgets!</p>
+                    <img src="https://i.postimg.cc/Nj9dgJ98/cards.png" alt="Cards">
+               </div>
+               <div class="content_2">
+                    <h4>shopping</h4>
+                    <a href="#">computer store</a>
+                    <a href="#">laptop store</a>
+                    <a href="#">accessories</a>
+                    <a href="#">sales & discount</a>
+               </div>
+               <div class="content_2">
+                    <h4>experience</h4>
+                    <a href="contact.html">contact us</a>
+                    <a href="#" target="_blank">payment method</a>
+                    <a href="#" target="_blank">delivery</a>
+                    <a href="#" target="_blank">return and exchange</a>
+               </div>
+               <div class="content_4">
+                    <h4>newsletter</h4>
+                    <p>be the first to know about new <br> arrivals, sales & promos!</p>
+                    <div class="footer-mail">
+                         <input type="email" placeholder="your email">
+                         <i class="bx bx-envelope"></i>
+                    </div>
+                    <hr>
+               </div>
+          </div>
+          <div class="footer-design">
+               <div class="footer-design-text"><p>design and code by minhaz halim zim</p></div>
+          </div>
+     </footer>
+     <script type="module" src="showAddToCartCards.js"></script>
+</body>
+</html>
