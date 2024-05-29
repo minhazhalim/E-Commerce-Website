@@ -160,10 +160,10 @@ a {
   justify-content: space-between;
   padding: 1.8rem;
 }
-.section-navbar img {
+.section-navbar .container img {
   width: 25%;
 }
-.section-navbar .navbar ul {
+.section-navbar .container .navbar ul {
   display: flex;
   align-items: center;
   gap: 3.2rem;
@@ -855,6 +855,9 @@ footer {
     flex-direction: column;
     gap: 3.2rem;
   }
+  .section-navbar .container .navbar ul {
+    gap: 2rem;
+  }
   .section-why--choose {
     & img {
       width: 30%;
@@ -875,5 +878,21 @@ footer {
   }
   :is(.section-contact--homepage) .container:first-child {
     padding: 6.4rem 0rem 2.4rem 0rem;
+  }
+}
+@media (width <= 400px){
+  .section-navbar .container .navbar ul {
+    gap: 1rem;
+  }
+  .section-navbar .container .navbar ul .nav-item .add-to-cart-button {
+    width: 60px;
+  }
+}
+@media (width <= 360px){
+  .section-navbar .container .navbar ul {
+    gap: 0.5rem;
+  }
+  .section-navbar .container .navbar ul .nav-item .add-to-cart-button {
+    width: 50px;
   }
 }
